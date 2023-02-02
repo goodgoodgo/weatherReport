@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="second"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.SecondFragment">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_height="170px"
+        android:layout_width="match_parent">
+        <EditText
+            android:id="@+id/findCity"
+            android:hint="  搜索全球天气"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/search"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="400px"
+        android:layout_width="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#514F4F">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="300px"
+                android:layout_height="110px"
+                android:layout_margin="50px">
+                <TextView
+                    android:id="@+id/firstCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:text="余杭"
+                    android:textColor="@color/white"
+                    android:textSize="70px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400px"
+                android:layout_height="100px"
+                android:layout_margin="0px"
+                android:paddingLeft="50px">
+
+                <TextView
+                    android:id="@+id/firstMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="晴  13° / 10°"
+                    android:textSize="45px"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/firstTmp"
+            android:layout_marginLeft="500px"
+            android:layout_marginTop="50px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="10°"
+            android:textSize="150px"
+            android:textColor="@color/white"
+            android:gravity="right"/>
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_height="400px"
+            android:layout_width="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400px"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#514F4F">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="300px"
+                        android:layout_height="110px"
+                        android:layout_margin="50px">
+                        <TextView
+                            android:id="@+id/secondCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableRight="@drawable/map"
+                            android:text="嘉兴市"
+                            android:textColor="@color/white"
+                            android:textSize="70px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="400px"
+                        android:layout_height="100px"
+                        android:layout_margin="0px"
+                        android:paddingLeft="50px">
+
+                        <TextView
+                            android:id="@+id/secondMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="小雨  11° / 9°"
+                            android:textSize="45px"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/secondTmp"
+                    android:layout_marginLeft="500px"
+                    android:layout_marginTop="50px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="9°"
+                    android:textSize="150px"
+                    android:textColor="@color/white"
+                    android:gravity="right"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200px">
+            <Button
+                android:id="@+id/button_generate_QRcode"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:text="生成二维码" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageview_QRcode"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/wea"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
